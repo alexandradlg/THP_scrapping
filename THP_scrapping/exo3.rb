@@ -36,13 +36,16 @@ def get_info_about_incubators(lien)
         incubator_pages = website_pages.css('h2.listing-row-title > a')
             incubator_pages.each { |page|
                 incubator_name = page.text
-                incubator_names.push(incubator_name)
-                # Ici on prend le nom de l'incubateur en on le met dans un array
+                incubator_webpage = page['href']
+                incub_contact = Hash[incubator_name => incubator_webpage]
+                incubator_names.push(incub_contact)
+                # Ici on prend le nom de l'incubateur + sa webpage sur alloweb et on le met dans un hash. 
+                # On push chaque hash dans un array
             }
         
         print incubator_names
         # incubator_website = 
-        # et ici on essaye de récupérer le site internet de l'incubateur...                 
+        # et ici on essaye de récupérer le site internet de l'incubateur... à suivre!                 
     }    
 end
 
