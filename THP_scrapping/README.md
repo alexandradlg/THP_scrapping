@@ -1,6 +1,9 @@
 # DAY 9
 Scrapping
 
+Edit rapide de ce matin suite à un problème lors de la première correction. J'ai utilisé HTTParty qu'il faut installer
+Après avoir fait gem install httparty dans le terminal pour installation, il se peut que ça ne fonctionne toujours pas. Si c'est le cas, en haut du code changer require 'HTTParty' en require 'httparty. Selon Stackoverflow, ça dépend des version, sorry!
+
 1. Scrapping de l'annuaire des Mairies du Val d'Oise :
 - Scrapper les liens de chaque mairie
 - Sur chaque site, récupérer le nom et l'email de la mairie
